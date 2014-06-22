@@ -15,7 +15,7 @@ for k=1:utterance_no
         filename=list{k,2};
         fid=fopen(filename,'r');
         if strcmpi(feature_file_format, 'HTK')
-           fseek(fid, 12, 'bof'); % skip the 12-byte HTK header
+           fseek(fid, 12, 'bof'); 
         end
         c=fread(fid,'float','b');        
         fclose(fid);
